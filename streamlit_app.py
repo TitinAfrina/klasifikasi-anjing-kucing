@@ -43,11 +43,8 @@ st.markdown("""
     }
     
     .upload-section {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 2rem;
-        border-radius: 15px;
+        padding: 1rem 0;
         margin: 2rem 0;
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     }
     
     .result-card {
@@ -162,19 +159,16 @@ with col2:
     </div>
     """, unsafe_allow_html=True)
 
-# File uploader with custom styling
-st.markdown('<div class="upload-section">', unsafe_allow_html=True)
+# File uploader
 uploaded_file = st.file_uploader(
     "📸 Upload Gambar Kucing atau Anjing",
     type=["jpg", "jpeg", "png"],
     help="Pilih gambar dengan format JPG, JPEG, atau PNG"
 )
-st.markdown('</div>', unsafe_allow_html=True)
 
 # Load model
 try:
     model = load_model()
-    st.success("✅ Model berhasil dimuat!")
 except Exception as e:
     st.error(f"❌ Error loading model: {e}")
     st.stop()
@@ -195,6 +189,8 @@ if uploaded_file is not None:
             )
         
         with result_col:
+            st.success("✅ Model berhasil dimuat!")
+            
             # Processing animation
             with st.spinner("🔍 Menganalisis gambar..."):
                 # Preprocess and predict
