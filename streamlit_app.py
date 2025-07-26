@@ -118,7 +118,7 @@ st.markdown("""
 # Header section
 st.markdown("""
 <div class="main-header">
-    <div class="main-title">🐾 AI Pet Classifier</div>
+    <div class="main-title">🐾 ML Pet Classifier</div>
     <div class="subtitle">Klasifikasi Kucing vs Anjing dengan Vision Transformer</div>
 </div>
 """, unsafe_allow_html=True)
