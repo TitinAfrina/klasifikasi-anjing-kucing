@@ -9,7 +9,7 @@ import base64
 
 # Set page configuration
 st.set_page_config(
-    page_title="AI Pet Classifier",
+    page_title="ML Pet Classifier",
     page_icon="🐾",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -119,7 +119,7 @@ st.markdown("""
 st.markdown("""
 <div class="main-header">
     <div class="main-title">🐾 AI Pet Classifier</div>
-    <div class="subtitle">Powered by Vision Transformer - Klasifikasi Kucing vs Anjing dengan AI</div>
+    <div class="subtitle">Klasifikasi Kucing vs Anjing dengan Vision Transformer</div>
 </div>
 """, unsafe_allow_html=True)
 
